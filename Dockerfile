@@ -6,4 +6,6 @@ RUN apt-get update && apt-get  install -y \
 
 RUN docker-php-ext-install mysqli zip
 
-RUN chown -R www-data. /var/www/html
+CMD chown -R www-data:www-data /var/www/html
+
+CMD apache2-foreground
