@@ -15,7 +15,4 @@ sudo yum install wget -y
 sudo wget -P /var/www/html/ https://github.com/mplesha/NoviNano/releases/download/v1.0/20180706_novinano_ts_976c110733e7eff58704180706072907_archive.zip
 sudo wget -P /var/www/html/ https://github.com/mplesha/NoviNano/releases/download/v1.0/20180706_novinano_ts_976c110733e7eff58704180706072907_installer.php
 
-sudo yum install git -y
-git clone https://github.com/valeriyyemets/Lesson3.git
-cd Lesson3
 sudo docker-compose up -d
