@@ -5,3 +5,5 @@ RUN apt-get update && apt-get  install -y \
         zip
 
 RUN docker-php-ext-install mysqli zip
+
+RUN chown -R www-data. /var/www/html
