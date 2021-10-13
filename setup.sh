@@ -18,5 +18,4 @@ sudo wget -P /var/www/html/ https://github.com/mplesha/NoviNano/releases/downloa
 sudo yum install git -y
 git clone https://github.com/valeriyyemets/Lesson3.git
 cd Lesson3
-sudo chmod +x setup.sh
 sudo docker-compose up -d
