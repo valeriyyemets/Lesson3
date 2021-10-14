@@ -11,8 +11,9 @@ sudo curl -L "https://github.com/docker/compose/releases/download/1.29.2/docker-
 sudo chmod +x /usr/local/bin/docker-compose
 sudo ln -s /usr/local/bin/docker-compose /usr/bin/docker-compose
 
-sudo yum install wget -y
-sudo wget -P /var/www/html/ https://github.com/mplesha/NoviNano/releases/download/v1.0/20180706_novinano_ts_976c110733e7eff58704180706072907_archive.zip
-sudo wget -P /var/www/html/ https://github.com/mplesha/NoviNano/releases/download/v1.0/20180706_novinano_ts_976c110733e7eff58704180706072907_installer.php
+sudo curl -L "https://github.com/mplesha/NoviNano/releases/download/v1.0/20180706_novinano_ts_976c110733e7eff58704180706072907_archive.zip" -o /var/www/html/20180706_novinano_ts_976c110733e7eff58704180706072907_archive.zip
+sudo curl -L "https://github.com/mplesha/NoviNano/releases/download/v1.0/20180706_novinano_ts_976c110733e7eff58704180706072907_installer.php" -o /var/www/html/20180706_novinano_ts_976c110733e7eff58704180706072907_installer.php
+
+sudo chown -R 33.33 /var/www/html
 
 sudo docker-compose up -d
