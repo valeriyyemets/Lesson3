@@ -8,7 +8,7 @@ services:
       ports:
         - 80:80
       volumes:
-        - /var/www/html:/var/www/html
+        - ./html:/var/www/html
       container_name: php56-apache
       depends_on:
         - db
@@ -23,7 +23,7 @@ services:
       ports:
         - 3306:3306
       volumes:
-        - /var/lib/mysql:/var/lib/mysql
+        - ./mysql:/var/lib/mysql
       environment:
              - MYSQL_ROOT_PASSWORD=mysqlrootpassword
              - MYSQL_DATABASE=wpbase
