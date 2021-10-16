@@ -6,5 +6,8 @@ RUN apt-get update && apt-get  install -y \
 
 RUN docker-php-ext-install mysqli zip
 
-RUN curl -L "https://github.com/mplesha/NoviNano/releases/download/v1.0/20180706_novinano_ts_976c110733e7eff58704180706072907_archive.zip" -o /var/www/html/20180706_novinano_ts_976c110733e7eff58704180706072907_archive.zip
-RUN curl -L "https://github.com/mplesha/NoviNano/releases/download/v1.0/20180706_novinano_ts_976c110733e7eff58704180706072907_installer.php" -o /var/www/html/20180706_novinano_ts_976c110733e7eff58704180706072907_installer.php
+ADD wpinstall.sh /
+
+RUN chmod +x /wpinstall.sh
+
+CMD ["/wpinstall.sh"]
