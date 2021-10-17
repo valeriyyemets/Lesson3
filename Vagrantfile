@@ -69,10 +69,12 @@ Vagrant.configure("2") do |config|
   # Ansible, Chef, Docker, Puppet and Salt are also available. Please see the
   # documentation for more information about their specific syntax and use.
    config.vm.provision "shell", inline: <<-SHELL 
-   yum install git mc -y
+   yum install git -y
    git clone https://github.com/valeriyyemets/Lesson3.git
    sudo chmod +x ./Lesson3/setup.sh
    sudo ./Lesson3/setup.sh
+   cd ./Lesson3
+   docker-compose up -d	
   #   apt-get update
   #   apt-get install -y apache2
    SHELL
